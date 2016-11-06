@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C92BDFCC-7A3C-4D65-8799-0FF19FC4F956}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PersonPositionServer</RootNamespace>
+    <AssemblyName>PersonPositionServer</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>18E4A471AD816A9F5C5FBEFC32BC246B23835574</ManifestCertificateThumbprint>
+    <ManifestKeyFile>PersonPositionServer_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <ApplicationIcon>Resources\MianICO.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Smart2000.net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ac6dae9a3b201cd3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Smart2000.net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AllDelegate.cs" />
+    <Compile Include="Common\Global.cs" />
+    <Compile Include="Common\ping.cs" />
+    <Compile Include="StaticService\BasicData.cs" />
+    <Compile Include="StaticService\CommonFun.cs" />
+    <Compile Include="View\testcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\testcard.Designer.cs">
+      <DependentUpon>testcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\w_set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\w_set.Designer.cs">
+      <DependentUpon>w_set.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCreateTestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCreateTestData.Designer.cs">
+      <DependentUpon>FrmCreateTestData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmDBRecover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmDBRecover.Designer.cs">
+      <DependentUpon>FrmDBRecover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmDelHardwareHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmDelHardwareHistory.Designer.cs">
+      <DependentUpon>FrmDelHardwareHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmHardCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmHardCommand.Designer.cs">
+      <DependentUpon>FrmHardCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmReg.Designer.cs">
+      <DependentUpon>FrmReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmRegInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmRegInfo.Designer.cs">
+      <DependentUpon>FrmRegInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmRelation.Designer.cs">
+      <DependentUpon>FrmRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FrmRegInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmRegInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmRelation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmSetting.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StaticService\DataTableFactory_Service.cs" />
+    <Compile Include="Common\DB_Service.cs" />
+    <Compile Include="Common\CommandFactory.cs" />
+    <Compile Include="Resources\Model\HardChannel.cs" />
+    <Compile Include="Resources\Model\Port_Service.cs" />
+    <Compile Include="StaticService\Protocol_Service.cs" />
+    <Compile Include="StaticService\Socket_Service.cs" />
+    <Compile Include="Resources\Model\TcpSocket_Service.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MianICO.ico" />
+    <EmbeddedResource Include="View\testcard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>testcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\w_set.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>w_set.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCreateTestData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmCreateTestData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmDBRecover.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDBRecover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmDelHardwareHistory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDelHardwareHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmHardCommand.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmHardCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmReg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReg.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MianICO.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
